@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 export function useAsync(func, dependencies = []) {
-    const { execute, ...state} = useAsyncInternal(func, dependencies, true);
+    const { execute, ...state } = useAsyncInternal(func, dependencies, true);
 
     useEffect(() => {
         execute();

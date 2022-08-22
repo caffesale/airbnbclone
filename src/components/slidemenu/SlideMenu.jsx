@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BsStar } from 'react-icons/bs';
 
 const SlideMenu = () => {
 
@@ -6,6 +7,7 @@ const SlideMenu = () => {
     return (
         <Category>
             <StBtn>
+                <BsStar className="icon"/><br />
                 기상천외한 숙소
             </StBtn>
             <StBtn>
@@ -38,6 +40,11 @@ const StBtn = styled.button`
     cursor: pointer;
     border: none;
     background: #f3f3e6;
-    font-size: 20px;
+    font-size: 13px;
     margin: 10px;
+    .icon {
+        font-size: 35px;
+        margin-bottom: 8px;
+    }
 `
+

@@ -7,12 +7,14 @@ import "../style/dist/css/main.css"
 //
 import Header from "../components/Header";
 import SlideMenu from "../components/slidemenu/SlideMenu";
+import { getToken } from "../utils/auth";
 
 
 
 function MainPage() {
     const [currentIndex, setCurrentIndex] = useState("");
     const [dataList, setDataList] = useState([]);
+    const [auth, setAuth] = useState(false);
     // const {loading, error, value: postCards } = useAsync(apis.getAllPostCard, [currentIndex]);
     
     // if(loading) return <div>...로딩 중...</div>
@@ -40,10 +42,18 @@ function MainPage() {
         }
         main();
     }, [currentIndex])
+
+    useEffect(() => {
+        const token = getToken();
+        if(token){
+            setAuth(true)
+        }
+    }, [])
+
     
     return (
         <>
-            <Header />
+            <Header auth={auth} setAuth={setAuth}/>
             <SlideMenu currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
             <div className="flex-container">
                 {dataList.map((each) => {

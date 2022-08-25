@@ -6,10 +6,15 @@ import { FaUserCircle } from 'react-icons/fa';
 import { HiMenu } from 'react-icons/hi';
 import { MdLanguage } from 'react-icons/md';
 import { FiSearch } from 'react-icons/fi';
+import { GrLogout } from 'react-icons/gr'
+import { removeToken } from "../utils/auth";
 
-function Header(params) {
+function Header({auth, setAuth}) {
 
-
+    const logout = () => {
+        removeToken();
+        setAuth(false);
+    }
 
     return (
         <>
@@ -34,16 +39,22 @@ function Header(params) {
                 </Btn>
                 <Posting>호스트 되기 </Posting>
 
-                <Link to={'/register'}>
-                <Icon><MdLanguage /></Icon>
-                </Link>
 
-                <DropDown>
-                    <Link to='/login'>
-                    <HiMenu className="icon" />
-                    <FaUserCircle onClick="menu" className="icon" />
+                { auth == true
+                ? <Icon onClick={logout}><GrLogout /></Icon>
+                : <>
+                    <Link to={'/register'}>
+                    <Icon><MdLanguage /></Icon>
                     </Link>
-                </DropDown>
+
+                    <DropDown>
+                        <Link to='/login'>
+                        <HiMenu className="icon" />
+                        <FaUserCircle onClick="menu" className="icon" />
+                        </Link>
+                    </DropDown>
+                </>
+                }
             </Container>
 
         </>

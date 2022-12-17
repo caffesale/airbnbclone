@@ -28,12 +28,14 @@ export const fetchPutReview = createAsyncThunk(
     'reviews/fetchPutReview',
     async (postId, reviewId, putReviewData) => {
         const response = await apis.putReview(postId, reviewId, putReviewData);
+
         return response.data
     }
 )
 
 const fetchRemoveReview = createAsyncThunk(
     'review/fetchRemoveReview',
+
     async (postId, reviewId) => {
         const response = await apis.deletePostCard(postId, reviewId);
         return response.data

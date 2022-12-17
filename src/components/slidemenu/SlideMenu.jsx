@@ -76,5 +76,6 @@ const StBtn = styled.button`
     &:hover:after{
         transform: scaleX(1);
     }
+
 `
 

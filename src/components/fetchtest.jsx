@@ -1,19 +1,16 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { apis } from "../api/api";
+// import React, { useEffect } from "react";
+// import { fetchGetReviews } from '../redux/reviewSlice/reviewSlice';
+// import {useDispatch} from "react-redux"
 
-function FetchTest() {
+// const Fetchtest = () => {
+//     const dispatch = useDispatch();
 
-    useEffect(async () => {
-        const response = await axios.get('http://localhost:5001/reviews')
-        console.log(response.data);
-    }, [])
+//     useEffect(() => {
+//         dispatch(fetchGetReviews())
+//     }, [])
     
-    return (
-        <div>
-            hi!
-        </div>
-    )
-}
 
-export default FetchTest;
+//     return <div>fetchtest</div>
+// };
+
+// export default Fetchtest;

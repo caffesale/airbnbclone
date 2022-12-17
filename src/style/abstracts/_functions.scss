@@ -1,31 +1,31 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass functions.
-// -----------------------------------------------------------------------------
+// // -----------------------------------------------------------------------------
+// // This file contains all application-wide Sass functions.
+// // -----------------------------------------------------------------------------
 
-// 그리드 (플렉스) 시스템
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
+// // 그리드 (플렉스) 시스템
+// .row {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
 
-$columns: 12;
+// $columns: 12;
 
-[class^=col-] {
-  flex-basis: 100%;
-}
+// [class^=col-] {
+//   flex-basis: 100%;
+// }
 
-@media(min-width: 960px){
-  @for $i from 1 through $columns {
-    .col-#{$i} {
-      flex: 0 0 (100% / ($columns / $i));
-    }
+// @media(min-width: 960px){
+//   @for $i from 1 through $columns {
+//     .col-#{$i} {
+//       flex: 0 0 (100% / ($columns / $i));
+//     }
     
-    .col-offset-#{$i} {
-      margin-left: 100% / (($columns / $i));
-    }
-  }
-}
+//     .col-offset-#{$i} {
+//       margin-left: 100% / (($columns / $i));
+//     }
+//   }
+// }
 
 
-// div class=row
-//    div class=col-$i
+// // div class=row
+// //    div class=col-$i

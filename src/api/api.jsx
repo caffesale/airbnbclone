@@ -1,25 +1,26 @@
 import axios from 'axios';
-import { saveToken, getToken, removeToken} from '../utils/auth'
+import { saveToken, getToken, removeToken } from '../utils/auth'
 
 // 서버 연결시 해제 
-// const BASE_URL = process.env.REACT_APP_SERVER_URL;
+const BASE_URL = process.env.REACT_APP_SERVER_URL;
 
 // 인스턴스 생성
 const api = axios.create({
-    baseURL: 'http://localhost:5001',
-    withCredentials: true,
+    baseURL: BASE_URL,
+    // withCredentials: true,
     headers: {
-        'content-type': 'application/json;charset=UTF-8',
+        'Content-Type': 'application/json;charset=UTF-8',
         accept: 'application/json',
     },
 });
 
 const apiMultiType = axios.create({
-    baseURL: 'http://localhost:5001',
-    withCredentials: true,
+    baseURL: BASE_URL,
+    // withCredentials: true,
+    // credentials: true,
     headers: {
-        'content-type': 'multitype/form-data'
-    }
+        'Content-Type': 'multipart/form-data'
+    },
 })
 
 // 인터셉터 
@@ -46,13 +47,13 @@ apiMultiType.interceptors.request.use((config) => {
 // apis
 export const apis = {
     //로그인
-    login: (userData) => api.post('/user/login', userData),
+    login: (userData) => api.post('/api/user/login', userData),
     // 회원가입 
-    signup: (userData) => api.post('/user/signup', userData),
+    signup: (userData) => api.post('api/user/signup', userData),
     // 아이디 중복 검사 (추가요소)
 
     // 메인 페이지 조회
-    getAllPostCard: () => api.get('/api/posts'),
+    getAllPostCard: () => api.get(`/api/posts`),
 
     //게시글 작성 - 수정 소요 있을 수 있음
     postPostCard: (postData) => apiMultiType.post('/api/posts', postData),

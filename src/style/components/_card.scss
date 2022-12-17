@@ -1,0 +1,43 @@
+.card{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 352px;
+    height: 434px;
+    position: relative;
+
+    &__image{
+        border-radius: 0.5rem;
+        height: 100%;
+        width: 100%;
+        border: 1px solid green;
+    }
+
+    &__description{
+        position: relative;
+    }
+
+    &__heart{
+        font-size: 1.25rem;
+        position: absolute;
+        top: 5px;
+        left: 325px;
+    }
+}
+
+.star{
+    position: absolute;
+    top: 2px;
+    left: 300px;
+}
+
+.description-container{
+    display: flex;
+}
+
+.star-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

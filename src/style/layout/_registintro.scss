@@ -1,0 +1,62 @@
+.intro-container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.intro-movie{
+    position: absolute;
+    overflow: hidden;
+    left: 0%;
+    width: 50%;
+    height: 100vh;
+}
+
+.intro-logo{
+    position:absolute;
+    color: white;
+    margin:30px;
+    cursor: pointer;
+}
+
+.intro-content{
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-end;
+    flex-direction: column;
+    background-color: #000000;
+}
+
+.intro-rightheader{
+    padding: 2rem 2.5rem 0 2.5rem;
+}
+
+.intro-button{
+    width: 5rem;
+    height: 2rem;
+    color: #fff;
+    background-color: #222222;
+    border-radius: 0.75rem;
+    
+}
+
+.intro-text{
+    margin: 30vh;
+    color: #fff;
+    width: 50%;
+}
+
+.intro-texttitle{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

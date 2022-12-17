@@ -1,0 +1,53 @@
+.host-container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.host-left-container{
+    height: 100vh;
+    max-height: 100%;
+    width: 50%;
+    position:fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.hostlogo{
+    position: fixed;
+    top: 2rem;
+    left: 48px;
+}
+
+.hostlogo__logo{
+    display: block;
+    height: 2rem;
+    width: 2rem;
+}
+
+.hostquestion{
+    margin-left: 3.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: unset;
+    max-width: 75%;
+    color:#fff;
+}
+
+.host-right-container{
+    overflow-y: auto;
+    height: 100vh;
+    max-height: 100%;
+    width: 50%;
+    position: fixed;
+    top:0;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.host-right-header{
+    position: fixed;
+    top:2rem;
+    left: 48px;
+}

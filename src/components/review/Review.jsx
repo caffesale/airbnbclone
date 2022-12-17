@@ -3,13 +3,13 @@ import React from "react";
 function Review() {
     return (
         <>
-            <div><img src="" alt="userimg" /></div>
             <div>
                 <span>username</span>
-                <span>date</span>
+                <span>review</span>
+                <span>modifiedAt</span>
             </div>
             <div>
-                <span>review_contents</span>
+                <span>review</span>
             </div>
         </>
     )
